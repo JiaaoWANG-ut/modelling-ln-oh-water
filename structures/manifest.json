@@ -1,0 +1,434 @@
+{
+  "composition": {
+    "n_water": 128,
+    "n_hydroxide": 3,
+    "n_atoms": 391,
+    "net_charge": 0
+  },
+  "sizing": {
+    "n_water": 128,
+    "n_hydroxide": 3,
+    "box_length": 15.781866235591567,
+    "droplet_radius": 9.790288466557895,
+    "solvent_volume": 3930.7468418999606
+  },
+  "vacuum_gap": 22.0,
+  "build": {
+    "La": {
+      "min_shell_oo": 2.7715319128398654,
+      "box_largest_cavity": 2.94356930892943,
+      "box_void_moves": 12,
+      "box_relax_iterations": 56,
+      "box_residual_overlap": 0.0009728986479040636,
+      "droplet_largest_cavity": 2.91814861982008,
+      "droplet_void_moves": 6,
+      "droplet_radius": 9.7223,
+      "droplet_cell": 41.262774561076355,
+      "droplet_relax_iterations": 26,
+      "droplet_residual_overlap": 0.0008373472494662693,
+      "coordination_number": 9,
+      "n_shell_water": 6,
+      "n_bulk_water": 122,
+      "min_oh_oh_shell": 4.156921938165305,
+      "multiplicity": 1,
+      "n_unpaired": 0,
+      "d_ln_oh": 2.4,
+      "d_ln_ow": 2.54
+    },
+    "Nd": {
+      "min_shell_oo": 2.715527214689447,
+      "box_largest_cavity": 2.9588764530309977,
+      "box_void_moves": 6,
+      "box_relax_iterations": 34,
+      "box_residual_overlap": 0.0009928776555745422,
+      "droplet_largest_cavity": 2.947836943833831,
+      "droplet_void_moves": 9,
+      "droplet_radius": 9.7193,
+      "droplet_cell": 41.3015823980253,
+      "droplet_relax_iterations": 16,
+      "droplet_residual_overlap": 0.000768502754359357,
+      "coordination_number": 9,
+      "n_shell_water": 6,
+      "n_bulk_water": 122,
+      "min_oh_oh_shell": 4.070319397786861,
+      "multiplicity": 4,
+      "n_unpaired": 3,
+      "d_ln_oh": 2.35,
+      "d_ln_ow": 2.49
+    },
+    "Gd": {
+      "min_shell_oo": 2.625924142708776,
+      "box_largest_cavity": 2.9578784819731063,
+      "box_void_moves": 10,
+      "box_relax_iterations": 41,
+      "box_residual_overlap": 0.0009170809565470783,
+      "droplet_largest_cavity": 2.9934345282812553,
+      "droplet_void_moves": 5,
+      "droplet_radius": 9.729,
+      "droplet_cell": 40.99360985075541,
+      "droplet_relax_iterations": 27,
+      "droplet_residual_overlap": 0.0008804303796074997,
+      "coordination_number": 9,
+      "n_shell_water": 6,
+      "n_bulk_water": 122,
+      "min_oh_oh_shell": 3.931755333181351,
+      "multiplicity": 8,
+      "n_unpaired": 7,
+      "d_ln_oh": 2.27,
+      "d_ln_ow": 2.41
+    },
+    "Dy": {
+      "min_shell_oo": 2.7113831365224765,
+      "box_largest_cavity": 2.9807238906208897,
+      "box_void_moves": 6,
+      "box_relax_iterations": 34,
+      "box_residual_overlap": 0.0008798140421446554,
+      "droplet_largest_cavity": 2.9895240451460188,
+      "droplet_void_moves": 7,
+      "droplet_radius": 9.7526,
+      "droplet_cell": 42.21791456655543,
+      "droplet_relax_iterations": 28,
+      "droplet_residual_overlap": 0.000890576297316592,
+      "coordination_number": 8,
+      "n_shell_water": 5,
+      "n_bulk_water": 123,
+      "min_oh_oh_shell": 2.711383136522476,
+      "multiplicity": 6,
+      "n_unpaired": 5,
+      "d_ln_oh": 2.23,
+      "d_ln_ow": 2.37
+    },
+    "Er": {
+      "min_shell_oo": 2.6749071302015466,
+      "box_largest_cavity": 2.9882256210727767,
+      "box_void_moves": 6,
+      "box_relax_iterations": 56,
+      "box_residual_overlap": 0.0009445839842929793,
+      "droplet_largest_cavity": 2.9856764360764267,
+      "droplet_void_moves": 7,
+      "droplet_radius": 9.7941,
+      "droplet_cell": 41.652645551855166,
+      "droplet_relax_iterations": 40,
+      "droplet_residual_overlap": 0.0008598211323955773,
+      "coordination_number": 8,
+      "n_shell_water": 5,
+      "n_bulk_water": 123,
+      "min_oh_oh_shell": 2.6749071302015466,
+      "multiplicity": 4,
+      "n_unpaired": 3,
+      "d_ln_oh": 2.2,
+      "d_ln_ow": 2.34
+    },
+    "Lu": {
+      "min_shell_oo": 2.626272455106973,
+      "box_largest_cavity": 2.96992753957242,
+      "box_void_moves": 7,
+      "box_relax_iterations": 56,
+      "box_residual_overlap": 0.0009999134636853313,
+      "droplet_largest_cavity": 2.98435338554952,
+      "droplet_void_moves": 5,
+      "droplet_radius": 9.631,
+      "droplet_cell": 41.66128467772588,
+      "droplet_relax_iterations": 14,
+      "droplet_residual_overlap": 0.0009462054595652525,
+      "coordination_number": 8,
+      "n_shell_water": 5,
+      "n_bulk_water": 123,
+      "min_oh_oh_shell": 2.6262724551069727,
+      "multiplicity": 1,
+      "n_unpaired": 0,
+      "d_ln_oh": 2.16,
+      "d_ln_ow": 2.3
+    }
+  },
+  "systems": {
+    "La-3OH-128H2O_box_pbc": {
+      "file": "box_pbc/La-3OH-128H2O_box_pbc.xyz",
+      "metal": "La",
+      "variant": "box_pbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 1,
+      "pbc": true,
+      "cell": [
+        15.781866235591567,
+        15.781866235591567,
+        15.781866235591567
+      ]
+    },
+    "La-3OH-128H2O_box_nonpbc": {
+      "file": "box_nonpbc/La-3OH-128H2O_box_nonpbc.xyz",
+      "metal": "La",
+      "variant": "box_nonpbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 1,
+      "pbc": false,
+      "cell": null
+    },
+    "La-3OH-128H2O_droplet_nonpbc": {
+      "file": "droplet_nonpbc/La-3OH-128H2O_droplet_nonpbc.xyz",
+      "metal": "La",
+      "variant": "droplet_nonpbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 1,
+      "pbc": false,
+      "cell": null
+    },
+    "La-3OH-128H2O_droplet_pbc": {
+      "file": "droplet_pbc/La-3OH-128H2O_droplet_pbc.xyz",
+      "metal": "La",
+      "variant": "droplet_pbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 1,
+      "pbc": true,
+      "cell": [
+        41.262774561076355,
+        41.262774561076355,
+        41.262774561076355
+      ]
+    },
+    "Nd-3OH-128H2O_box_pbc": {
+      "file": "box_pbc/Nd-3OH-128H2O_box_pbc.xyz",
+      "metal": "Nd",
+      "variant": "box_pbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 4,
+      "pbc": true,
+      "cell": [
+        15.781866235591567,
+        15.781866235591567,
+        15.781866235591567
+      ]
+    },
+    "Nd-3OH-128H2O_box_nonpbc": {
+      "file": "box_nonpbc/Nd-3OH-128H2O_box_nonpbc.xyz",
+      "metal": "Nd",
+      "variant": "box_nonpbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 4,
+      "pbc": false,
+      "cell": null
+    },
+    "Nd-3OH-128H2O_droplet_nonpbc": {
+      "file": "droplet_nonpbc/Nd-3OH-128H2O_droplet_nonpbc.xyz",
+      "metal": "Nd",
+      "variant": "droplet_nonpbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 4,
+      "pbc": false,
+      "cell": null
+    },
+    "Nd-3OH-128H2O_droplet_pbc": {
+      "file": "droplet_pbc/Nd-3OH-128H2O_droplet_pbc.xyz",
+      "metal": "Nd",
+      "variant": "droplet_pbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 4,
+      "pbc": true,
+      "cell": [
+        41.3015823980253,
+        41.3015823980253,
+        41.3015823980253
+      ]
+    },
+    "Gd-3OH-128H2O_box_pbc": {
+      "file": "box_pbc/Gd-3OH-128H2O_box_pbc.xyz",
+      "metal": "Gd",
+      "variant": "box_pbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 8,
+      "pbc": true,
+      "cell": [
+        15.781866235591567,
+        15.781866235591567,
+        15.781866235591567
+      ]
+    },
+    "Gd-3OH-128H2O_box_nonpbc": {
+      "file": "box_nonpbc/Gd-3OH-128H2O_box_nonpbc.xyz",
+      "metal": "Gd",
+      "variant": "box_nonpbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 8,
+      "pbc": false,
+      "cell": null
+    },
+    "Gd-3OH-128H2O_droplet_nonpbc": {
+      "file": "droplet_nonpbc/Gd-3OH-128H2O_droplet_nonpbc.xyz",
+      "metal": "Gd",
+      "variant": "droplet_nonpbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 8,
+      "pbc": false,
+      "cell": null
+    },
+    "Gd-3OH-128H2O_droplet_pbc": {
+      "file": "droplet_pbc/Gd-3OH-128H2O_droplet_pbc.xyz",
+      "metal": "Gd",
+      "variant": "droplet_pbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 8,
+      "pbc": true,
+      "cell": [
+        40.99360985075541,
+        40.99360985075541,
+        40.99360985075541
+      ]
+    },
+    "Dy-3OH-128H2O_box_pbc": {
+      "file": "box_pbc/Dy-3OH-128H2O_box_pbc.xyz",
+      "metal": "Dy",
+      "variant": "box_pbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 6,
+      "pbc": true,
+      "cell": [
+        15.781866235591567,
+        15.781866235591567,
+        15.781866235591567
+      ]
+    },
+    "Dy-3OH-128H2O_box_nonpbc": {
+      "file": "box_nonpbc/Dy-3OH-128H2O_box_nonpbc.xyz",
+      "metal": "Dy",
+      "variant": "box_nonpbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 6,
+      "pbc": false,
+      "cell": null
+    },
+    "Dy-3OH-128H2O_droplet_nonpbc": {
+      "file": "droplet_nonpbc/Dy-3OH-128H2O_droplet_nonpbc.xyz",
+      "metal": "Dy",
+      "variant": "droplet_nonpbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 6,
+      "pbc": false,
+      "cell": null
+    },
+    "Dy-3OH-128H2O_droplet_pbc": {
+      "file": "droplet_pbc/Dy-3OH-128H2O_droplet_pbc.xyz",
+      "metal": "Dy",
+      "variant": "droplet_pbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 6,
+      "pbc": true,
+      "cell": [
+        42.21791456655543,
+        42.21791456655543,
+        42.21791456655543
+      ]
+    },
+    "Er-3OH-128H2O_box_pbc": {
+      "file": "box_pbc/Er-3OH-128H2O_box_pbc.xyz",
+      "metal": "Er",
+      "variant": "box_pbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 4,
+      "pbc": true,
+      "cell": [
+        15.781866235591567,
+        15.781866235591567,
+        15.781866235591567
+      ]
+    },
+    "Er-3OH-128H2O_box_nonpbc": {
+      "file": "box_nonpbc/Er-3OH-128H2O_box_nonpbc.xyz",
+      "metal": "Er",
+      "variant": "box_nonpbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 4,
+      "pbc": false,
+      "cell": null
+    },
+    "Er-3OH-128H2O_droplet_nonpbc": {
+      "file": "droplet_nonpbc/Er-3OH-128H2O_droplet_nonpbc.xyz",
+      "metal": "Er",
+      "variant": "droplet_nonpbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 4,
+      "pbc": false,
+      "cell": null
+    },
+    "Er-3OH-128H2O_droplet_pbc": {
+      "file": "droplet_pbc/Er-3OH-128H2O_droplet_pbc.xyz",
+      "metal": "Er",
+      "variant": "droplet_pbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 4,
+      "pbc": true,
+      "cell": [
+        41.652645551855166,
+        41.652645551855166,
+        41.652645551855166
+      ]
+    },
+    "Lu-3OH-128H2O_box_pbc": {
+      "file": "box_pbc/Lu-3OH-128H2O_box_pbc.xyz",
+      "metal": "Lu",
+      "variant": "box_pbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 1,
+      "pbc": true,
+      "cell": [
+        15.781866235591567,
+        15.781866235591567,
+        15.781866235591567
+      ]
+    },
+    "Lu-3OH-128H2O_box_nonpbc": {
+      "file": "box_nonpbc/Lu-3OH-128H2O_box_nonpbc.xyz",
+      "metal": "Lu",
+      "variant": "box_nonpbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 1,
+      "pbc": false,
+      "cell": null
+    },
+    "Lu-3OH-128H2O_droplet_nonpbc": {
+      "file": "droplet_nonpbc/Lu-3OH-128H2O_droplet_nonpbc.xyz",
+      "metal": "Lu",
+      "variant": "droplet_nonpbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 1,
+      "pbc": false,
+      "cell": null
+    },
+    "Lu-3OH-128H2O_droplet_pbc": {
+      "file": "droplet_pbc/Lu-3OH-128H2O_droplet_pbc.xyz",
+      "metal": "Lu",
+      "variant": "droplet_pbc",
+      "n_atoms": 391,
+      "charge": 0,
+      "spin_multiplicity": 1,
+      "pbc": true,
+      "cell": [
+        41.66128467772588,
+        41.66128467772588,
+        41.66128467772588
+      ]
+    }
+  }
+}

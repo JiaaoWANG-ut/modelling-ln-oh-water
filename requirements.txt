@@ -1,0 +1,16 @@
+# Structure building and validation (build/, sufficient to regenerate everything)
+numpy>=1.26
+scipy>=1.11
+ase>=3.23
+
+# MLIP inference (mlip/) -- install only what you intend to run.
+# Model weights are not part of this repository.
+#
+# UMA 1.2 (uma-s-1p2); the weights are gated, run `hf auth login` first
+# fairchem-core>=2.0
+#
+# MACE-OMOL needs mace-torch >= 0.3.14, MACE-POLAR-1 needs >= 0.3.16
+# mace-torch>=0.3.16
+#
+# Long-range electrostatics backend required by MACE-POLAR-1:
+# graph_electrostatics @ git+https://github.com/WillBaldwin0/graph_electrostatics
