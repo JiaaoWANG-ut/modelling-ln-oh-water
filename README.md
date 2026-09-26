@@ -1,3 +1,5 @@
+150 ps Dy versus Nd results (English): https://jiaaowang-ut.github.io/modelling-ln-oh-water/
+
 # Ln(OH)₃ + 128 H₂O：水盒子与水滴初始模型（PBC / non-PBC）
 
 为 UMA 1.2、MACE-OMOL、MACE-POLAR-1 三个模型准备的镧系离子水合初始结构，

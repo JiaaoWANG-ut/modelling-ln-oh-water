@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dy versus Nd hydroxide binding</title>
+<style>
+  body { margin: 0; background: #fff; color: #111; font-family: "Liberation Sans", Helvetica, Arial, sans-serif; }
+  main { max-width: 880px; margin: 0 auto; padding: 36px 20px 72px; }
+  h1 { font-size: 22px; line-height: 1.25; font-weight: 700; margin: 0 0 8px; }
+  h2 { font-size: 16px; margin: 2.2em 0 0.6em; }
+  p, li { font-size: 15px; line-height: 1.55; }
+  .kicker { font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #444; margin: 0 0 8px; }
+  figure { margin: 12px 0 8px; }
+  img { width: 100%; height: auto; background: #fff; }
+  figcaption, .note { font-size: 13px; line-height: 1.45; color: #222; }
+  .temps { display: flex; gap: 8px; margin: 12px 0; }
+  button { font: inherit; font-size: 13px; background: #fff; color: #111; border: 1px solid #111; padding: 4px 10px; cursor: pointer; }
+  button.active { background: #111; color: #fff; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 8px 0 18px; }
+  th, td { border-bottom: 1px solid #ccc; padding: 5px 6px; text-align: right; }
+  th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+  th { font-weight: 700; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker">150 ps NVT · UMA-s-1.2.1 and DPA4C-Plus</p>
+  <h1>Dy versus Nd: how many hydroxides stay on the metal</h1>
+  <p>
+    With DPA4C-Plus, Dy keeps more hydroxide in the first shell than Nd under every boundary condition.
+    Averaged with equal weight over the four boundaries and five temperatures, the bound-hydroxide count is
+    2.37 for Dy and 1.75 for Nd. Each number is one 150 ps trajectory.
+  </p>
+  <p>
+    With UMA-s-1.2.1 the two metals both stay near three hydroxides in the open box and in both droplets.
+    In the periodic box they do not. Nd remains at three
+    (3.00, 3.00, 3.00, 2.99, 3.00 from 300 to 500 K).
+    Dy does not
+    (0.37, 0.03, 1.01, 2.11, 0.15).
+    Those five Dy runs are separate trajectories, and they do not share one outcome:
+    the hydroxide leaves, a bare oxygen stays inside 3.0 Å, or two hydroxides remain.
+  </p>
+
+  <h2>Bound hydroxide versus time</h2>
+  <p class="note">
+    Each hydrogen is assigned to the nearest oxygen. An oxygen with exactly one hydrogen is a hydroxide, so the count follows proton transfer.
+    It is bound when the metal–oxygen distance is below 3.0 Å. Solid line, Dy. Dashed line, Nd. Four rows are the four boundary conditions.
+  </p>
+  <div class="temps" data-group="coord"><button type="button" class="active" data-temp="300">300 K</button><button type="button" class="" data-temp="350">350 K</button><button type="button" class="" data-temp="400">400 K</button><button type="button" class="" data-temp="450">450 K</button><button type="button" class="" data-temp="500">500 K</button></div>
+  <figure class="panel" data-group="coord" data-temp="300"><img src="figures/coordination_T300.png" alt="coordination at 300 K, four boundary conditions, Nd and Dy"></figure>
+<figure class="panel" data-group="coord" data-temp="350" hidden><img src="figures/coordination_T350.png" alt="coordination at 350 K, four boundary conditions, Nd and Dy"></figure>
+<figure class="panel" data-group="coord" data-temp="400" hidden><img src="figures/coordination_T400.png" alt="coordination at 400 K, four boundary conditions, Nd and Dy"></figure>
+<figure class="panel" data-group="coord" data-temp="450" hidden><img src="figures/coordination_T450.png" alt="coordination at 450 K, four boundary conditions, Nd and Dy"></figure>
+<figure class="panel" data-group="coord" data-temp="500" hidden><img src="figures/coordination_T500.png" alt="coordination at 500 K, four boundary conditions, Nd and Dy"></figure>
+
+  <h2>Distance of the three t = 0 hydroxide oxygens</h2>
+  <p class="note">
+    The three traces are the three oxygens that are hydroxide at 0 ps (at most one H within 1.20 Å).
+    Each frame they are reordered into nearest, middle and farthest. Left column, Nd. Right column, Dy.
+    The dashed line is 3.10 Å and the dotted line is 5 Å. A red mark is the first time fewer than three of those oxygens remain inside 3.10 Å.
+    This is the same definition as <code>plot_oh_distance_Dy_vs_Nd.py</code> in the plot-scripts-v1 release.
+  </p>
+  <div class="temps" data-group="model">
+    <button type="button" class="active" data-model="uma">UMA-s-1.2.1</button>
+    <button type="button" data-model="dpa">DPA4C-Plus</button>
+  </div>
+  <div class="temps" data-group="dist"><button type="button" class="active" data-temp="300">300 K</button><button type="button" class="" data-temp="350">350 K</button><button type="button" class="" data-temp="400">400 K</button><button type="button" class="" data-temp="450">450 K</button><button type="button" class="" data-temp="500">500 K</button></div>
+  <figure class="panel" data-group="dist-uma" data-temp="300"><img src="figures/uma_distance_T300.png" alt="uma_distance at 300 K, four boundary conditions, Nd and Dy"></figure>
+<figure class="panel" data-group="dist-uma" data-temp="350" hidden><img src="figures/uma_distance_T350.png" alt="uma_distance at 350 K, four boundary conditions, Nd and Dy"></figure>
+<figure class="panel" data-group="dist-uma" data-temp="400" hidden><img src="figures/uma_distance_T400.png" alt="uma_distance at 400 K, four boundary conditions, Nd and Dy"></figure>
+<figure class="panel" data-group="dist-uma" data-temp="450" hidden><img src="figures/uma_distance_T450.png" alt="uma_distance at 450 K, four boundary conditions, Nd and Dy"></figure>
+<figure class="panel" data-group="dist-uma" data-temp="500" hidden><img src="figures/uma_distance_T500.png" alt="uma_distance at 500 K, four boundary conditions, Nd and Dy"></figure>
+  <figure class="panel" data-group="dist-dpa" data-temp="300" hidden><img src="figures/dpa_distance_T300.png" alt="dpa_distance at 300 K, four boundary conditions, Nd and Dy"></figure>
+<figure class="panel" data-group="dist-dpa" data-temp="350" hidden><img src="figures/dpa_distance_T350.png" alt="dpa_distance at 350 K, four boundary conditions, Nd and Dy"></figure>
+<figure class="panel" data-group="dist-dpa" data-temp="400" hidden><img src="figures/dpa_distance_T400.png" alt="dpa_distance at 400 K, four boundary conditions, Nd and Dy"></figure>
+<figure class="panel" data-group="dist-dpa" data-temp="450" hidden><img src="figures/dpa_distance_T450.png" alt="dpa_distance at 450 K, four boundary conditions, Nd and Dy"></figure>
+<figure class="panel" data-group="dist-dpa" data-temp="500" hidden><img src="figures/dpa_distance_T500.png" alt="dpa_distance at 500 K, four boundary conditions, Nd and Dy"></figure>
+
+  <h2>Time average of the bound-hydroxide count</h2>
+  <p class="note">UMA-s-1.2.1. Each entry is the 0–150 ps mean of one trajectory. The cutoff is 3.0 Å.</p>
+  <table><thead><tr><th>Boundary</th><th>Metal</th><th>300 K</th><th>350 K</th><th>400 K</th><th>450 K</th><th>500 K</th><th>Mean</th></tr></thead><tbody><tr><td>Box, periodic</td><td>Nd</td><td>3.00</td><td>3.00</td><td>3.00</td><td>2.99</td><td>3.00</td><td>3.00</td></tr><tr><td>Box, periodic</td><td>Dy</td><td>0.37</td><td>0.03</td><td>1.01</td><td>2.11</td><td>0.15</td><td>0.73</td></tr><tr><td>Box, non-periodic</td><td>Nd</td><td>2.91</td><td>2.91</td><td>2.94</td><td>2.99</td><td>3.00</td><td>2.95</td></tr><tr><td>Box, non-periodic</td><td>Dy</td><td>2.88</td><td>2.99</td><td>2.97</td><td>2.99</td><td>3.00</td><td>2.97</td></tr><tr><td>Droplet, periodic</td><td>Nd</td><td>2.73</td><td>2.98</td><td>2.90</td><td>2.95</td><td>2.96</td><td>2.90</td></tr><tr><td>Droplet, periodic</td><td>Dy</td><td>2.79</td><td>2.93</td><td>2.93</td><td>2.96</td><td>2.99</td><td>2.92</td></tr><tr><td>Droplet, non-periodic</td><td>Nd</td><td>2.98</td><td>2.94</td><td>2.87</td><td>2.98</td><td>3.00</td><td>2.95</td></tr><tr><td>Droplet, non-periodic</td><td>Dy</td><td>2.78</td><td>2.95</td><td>2.96</td><td>2.99</td><td>3.00</td><td>2.94</td></tr></tbody></table>
+  <p class="note">DPA4C-Plus.</p>
+  <table><thead><tr><th>Boundary</th><th>Metal</th><th>300 K</th><th>350 K</th><th>400 K</th><th>450 K</th><th>500 K</th><th>Mean</th></tr></thead><tbody><tr><td>Box, periodic</td><td>Nd</td><td>0.62</td><td>0.47</td><td>1.46</td><td>1.39</td><td>2.14</td><td>1.21</td></tr><tr><td>Box, periodic</td><td>Dy</td><td>1.16</td><td>2.02</td><td>2.21</td><td>2.53</td><td>2.65</td><td>2.12</td></tr><tr><td>Box, non-periodic</td><td>Nd</td><td>0.78</td><td>1.63</td><td>2.09</td><td>2.53</td><td>2.81</td><td>1.97</td></tr><tr><td>Box, non-periodic</td><td>Dy</td><td>2.22</td><td>1.69</td><td>2.58</td><td>2.86</td><td>2.97</td><td>2.47</td></tr><tr><td>Droplet, periodic</td><td>Nd</td><td>1.05</td><td>1.47</td><td>1.89</td><td>2.73</td><td>2.84</td><td>2.00</td></tr><tr><td>Droplet, periodic</td><td>Dy</td><td>1.43</td><td>2.22</td><td>2.51</td><td>2.92</td><td>2.87</td><td>2.39</td></tr><tr><td>Droplet, non-periodic</td><td>Nd</td><td>0.64</td><td>1.18</td><td>1.80</td><td>2.68</td><td>2.75</td><td>1.81</td></tr><tr><td>Droplet, non-periodic</td><td>Dy</td><td>2.58</td><td>2.05</td><td>2.27</td><td>2.78</td><td>2.89</td><td>2.51</td></tr></tbody></table>
+
+  <h2>Simulation</h2>
+  <ul>
+    <li>Composition Ln<sup>3+</sup> + 3 OH<sup>−</sup> + 128 H<sub>2</sub>O, 391 atoms, charge 0. Nd spin multiplicity 4. Dy spin multiplicity 6.</li>
+    <li>UMA-s-1.2.1 from <code>uma-s-1p2p1.pt</code>, fairchem turbo, task omol, TF32. Spin is written as the multiplicity on every energy and force call.</li>
+    <li>DPA4C-Plus from <code>frozen.pt2</code>, <code>charge_spin = [0, multiplicity]</code>, TF32 inference. The checkpoint default <code>[0, 1]</code> is not used.</li>
+    <li>NVT Langevin, 1 fs, 150 ps, friction 1 ps<sup>−1</sup>, fixed cell. Frames every 0.1 ps. Temperatures 300, 350, 400, 450 and 500 K, one trajectory each.</li>
+    <li>Box length 15.782 Å. Droplet periodic cell 42.218 Å.</li>
+  </ul>
+</main>
+<script>
+function select(group, key, value) {
+  document.querySelectorAll('.temps[data-group="' + group + '"] button').forEach(function (button) {
+    button.classList.toggle("active", button.dataset[key] === value);
+  });
+}
+document.querySelectorAll(".temps").forEach(function (bar) {
+  bar.addEventListener("click", function (event) {
+    var button = event.target.closest("button");
+    if (!button) return;
+    if (bar.dataset.group === "model") {
+      var model = button.dataset.model;
+      select("model", "model", model);
+      var tempButton = document.querySelector('.temps[data-group="dist"] button.active');
+      var temp = tempButton ? tempButton.dataset.temp : "300";
+      document.querySelectorAll(".panel").forEach(function (panel) {
+        if (panel.dataset.group.indexOf("dist-") !== 0) return;
+        panel.hidden = !(panel.dataset.group === "dist-" + model && panel.dataset.temp === temp);
+      });
+      return;
+    }
+    var temp = button.dataset.temp;
+    select(bar.dataset.group, "temp", temp);
+    if (bar.dataset.group === "dist") {
+      var modelButton = document.querySelector('.temps[data-group="model"] button.active');
+      var model = modelButton ? modelButton.dataset.model : "uma";
+      document.querySelectorAll(".panel").forEach(function (panel) {
+        if (panel.dataset.group.indexOf("dist-") !== 0) return;
+        panel.hidden = !(panel.dataset.group === "dist-" + model && panel.dataset.temp === temp);
+      });
+      return;
+    }
+    document.querySelectorAll('.panel[data-group="' + bar.dataset.group + '"]').forEach(function (panel) {
+      panel.hidden = panel.dataset.temp !== temp;
+    });
+  });
+});
+document.querySelectorAll('.panel[data-group="dist-dpa"]').forEach(function (panel) { panel.hidden = true; });
+</script>
+</body>
+</html>
