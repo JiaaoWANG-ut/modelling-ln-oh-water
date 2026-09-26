@@ -66,6 +66,52 @@
 <figure class="panel" data-group="dist-dpa" data-temp="450" hidden><img src="figures/dpa_distance_T450.png" alt="dpa_distance at 450 K, four boundary conditions, Nd and Dy"></figure>
 <figure class="panel" data-group="dist-dpa" data-temp="500" hidden><img src="figures/dpa_distance_T500.png" alt="dpa_distance at 500 K, four boundary conditions, Nd and Dy"></figure>
 
+  <h2>UMA turbo versus UMA default at 300 K</h2>
+  <p class="note">
+    Left column: the previous production, UMA-s-1.2.1 turbo, friction 1 ps<sup>−1</sup>.
+    Right column: the run that uses the v2026-09-04 input settings, UMA-s-1.2.1 default (TF32 off), friction 0.01.
+    Both are one 150 ps trajectory at 300 K from the same starting geometry.
+    The three traces, the 3.10 Å and 5 Å lines, and the leave mark use the same definition as the distance figure above.
+    Green, nearest. Orange, middle. Blue, farthest.
+  </p>
+  <div class="temps" data-group="cmp"><button type="button" data-metal="La">La</button><button type="button" class="active" data-metal="Nd">Nd</button><button type="button" data-metal="Gd">Gd</button><button type="button" data-metal="Dy">Dy</button><button type="button" data-metal="Er">Er</button><button type="button" data-metal="Lu">Lu</button></div>
+  <figure class="panel" data-group="cmp" data-metal="La" hidden><img src="figures/compare_La_300K.png" alt="La, 300 K, UMA turbo on the left and UMA default on the right, four boundary conditions"></figure>
+  <figure class="panel" data-group="cmp" data-metal="Nd"><img src="figures/compare_Nd_300K.png" alt="Nd, 300 K, UMA turbo on the left and UMA default on the right, four boundary conditions"></figure>
+  <figure class="panel" data-group="cmp" data-metal="Gd" hidden><img src="figures/compare_Gd_300K.png" alt="Gd, 300 K, UMA turbo on the left and UMA default on the right, four boundary conditions"></figure>
+  <figure class="panel" data-group="cmp" data-metal="Dy" hidden><img src="figures/compare_Dy_300K.png" alt="Dy, 300 K, UMA turbo on the left and UMA default on the right, four boundary conditions"></figure>
+  <figure class="panel" data-group="cmp" data-metal="Er" hidden><img src="figures/compare_Er_300K.png" alt="Er, 300 K, UMA turbo on the left and UMA default on the right, four boundary conditions"></figure>
+  <figure class="panel" data-group="cmp" data-metal="Lu" hidden><img src="figures/compare_Lu_300K.png" alt="Lu, 300 K, UMA turbo on the left and UMA default on the right, four boundary conditions"></figure>
+  <p class="note">Leave is the first time fewer than three of the t = 0 hydroxide oxygens remain inside 3.10 Å. “stays” means that did not happen in 150 ps. Farthest is the maximum of the blue trace, in Å. Each row is one trajectory.</p>
+  <table>
+    <thead><tr><th>Metal</th><th>Boundary</th><th>turbo leave</th><th>default leave</th><th>turbo farthest / Å</th><th>default farthest / Å</th></tr></thead>
+    <tbody>
+      <tr><td>La</td><td>Box, periodic</td><td>47.4 ps</td><td>83.4 ps</td><td>8.56</td><td>3.43</td></tr>
+      <tr><td>La</td><td>Box, non-periodic</td><td>24.7 ps</td><td>75.2 ps</td><td>8.07</td><td>3.18</td></tr>
+      <tr><td>La</td><td>Droplet, periodic</td><td>31.1 ps</td><td>85.3 ps</td><td>8.05</td><td>14.15</td></tr>
+      <tr><td>La</td><td>Droplet, non-periodic</td><td>7.6 ps</td><td>16.3 ps</td><td>3.31</td><td>3.43</td></tr>
+      <tr><td>Nd</td><td>Box, periodic</td><td>stays</td><td>33.5 ps</td><td>2.67</td><td>5.97</td></tr>
+      <tr><td>Nd</td><td>Box, non-periodic</td><td>97.4 ps</td><td>55.2 ps</td><td>3.21</td><td>13.39</td></tr>
+      <tr><td>Nd</td><td>Droplet, periodic</td><td>23.1 ps</td><td>stays</td><td>3.63</td><td>2.87</td></tr>
+      <tr><td>Nd</td><td>Droplet, non-periodic</td><td>18.2 ps</td><td>56.1 ps</td><td>3.39</td><td>11.71</td></tr>
+      <tr><td>Gd</td><td>Box, periodic</td><td>0.5 ps</td><td>0.3 ps</td><td>3.99</td><td>5.61</td></tr>
+      <tr><td>Gd</td><td>Box, non-periodic</td><td>stays</td><td>52.5 ps</td><td>2.85</td><td>4.79</td></tr>
+      <tr><td>Gd</td><td>Droplet, periodic</td><td>stays</td><td>0.1 ps</td><td>2.99</td><td>11.78</td></tr>
+      <tr><td>Gd</td><td>Droplet, non-periodic</td><td>110.9 ps</td><td>0.2 ps</td><td>10.68</td><td>11.29</td></tr>
+      <tr><td>Dy</td><td>Box, periodic</td><td>1.2 ps</td><td>2.5 ps</td><td>5.22</td><td>4.68</td></tr>
+      <tr><td>Dy</td><td>Box, non-periodic</td><td>36.9 ps</td><td>65.9 ps</td><td>4.41</td><td>10.78</td></tr>
+      <tr><td>Dy</td><td>Droplet, periodic</td><td>134.8 ps</td><td>28.4 ps</td><td>3.39</td><td>8.42</td></tr>
+      <tr><td>Dy</td><td>Droplet, non-periodic</td><td>129.8 ps</td><td>stays</td><td>3.28</td><td>2.80</td></tr>
+      <tr><td>Er</td><td>Box, periodic</td><td>stays</td><td>stays</td><td>2.49</td><td>2.50</td></tr>
+      <tr><td>Er</td><td>Box, non-periodic</td><td>stays</td><td>stays</td><td>2.69</td><td>2.71</td></tr>
+      <tr><td>Er</td><td>Droplet, periodic</td><td>70.3 ps</td><td>stays</td><td>10.44</td><td>2.98</td></tr>
+      <tr><td>Er</td><td>Droplet, non-periodic</td><td>stays</td><td>stays</td><td>2.83</td><td>2.50</td></tr>
+      <tr><td>Lu</td><td>Box, periodic</td><td>stays</td><td>stays</td><td>2.70</td><td>2.47</td></tr>
+      <tr><td>Lu</td><td>Box, non-periodic</td><td>stays</td><td>stays</td><td>2.43</td><td>2.52</td></tr>
+      <tr><td>Lu</td><td>Droplet, periodic</td><td>stays</td><td>stays</td><td>2.48</td><td>2.80</td></tr>
+      <tr><td>Lu</td><td>Droplet, non-periodic</td><td>stays</td><td>stays</td><td>2.46</td><td>2.47</td></tr>
+    </tbody>
+  </table>
+
   <h2>Time average of the bound-hydroxide count</h2>
   <p class="note">UMA-s-1.2.1. Each entry is the 0–150 ps mean of one trajectory. The cutoff is 3.0 Å.</p>
   <table><thead><tr><th>Boundary</th><th>Metal</th><th>300 K</th><th>350 K</th><th>400 K</th><th>450 K</th><th>500 K</th><th>Mean</th></tr></thead><tbody><tr><td>Box, periodic</td><td>Nd</td><td>3.00</td><td>3.00</td><td>3.00</td><td>2.99</td><td>3.00</td><td>3.00</td></tr><tr><td>Box, periodic</td><td>Dy</td><td>0.37</td><td>0.03</td><td>1.01</td><td>2.11</td><td>0.15</td><td>0.73</td></tr><tr><td>Box, non-periodic</td><td>Nd</td><td>2.91</td><td>2.91</td><td>2.94</td><td>2.99</td><td>3.00</td><td>2.95</td></tr><tr><td>Box, non-periodic</td><td>Dy</td><td>2.88</td><td>2.99</td><td>2.97</td><td>2.99</td><td>3.00</td><td>2.97</td></tr><tr><td>Droplet, periodic</td><td>Nd</td><td>2.73</td><td>2.98</td><td>2.90</td><td>2.95</td><td>2.96</td><td>2.90</td></tr><tr><td>Droplet, periodic</td><td>Dy</td><td>2.79</td><td>2.93</td><td>2.93</td><td>2.96</td><td>2.99</td><td>2.92</td></tr><tr><td>Droplet, non-periodic</td><td>Nd</td><td>2.98</td><td>2.94</td><td>2.87</td><td>2.98</td><td>3.00</td><td>2.95</td></tr><tr><td>Droplet, non-periodic</td><td>Dy</td><td>2.78</td><td>2.95</td><td>2.96</td><td>2.99</td><td>3.00</td><td>2.94</td></tr></tbody></table>
@@ -91,6 +137,14 @@ document.querySelectorAll(".temps").forEach(function (bar) {
   bar.addEventListener("click", function (event) {
     var button = event.target.closest("button");
     if (!button) return;
+    if (bar.dataset.group === "cmp") {
+      var metal = button.dataset.metal;
+      select("cmp", "metal", metal);
+      document.querySelectorAll('.panel[data-group="cmp"]').forEach(function (panel) {
+        panel.hidden = panel.dataset.metal !== metal;
+      });
+      return;
+    }
     if (bar.dataset.group === "model") {
       var model = button.dataset.model;
       select("model", "model", model);
