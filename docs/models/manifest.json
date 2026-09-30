@@ -1,0 +1,50 @@
+[
+  {
+    "id": "box_pbc",
+    "title": "Box, periodic",
+    "file": "models/Nd_box_pbc.xyz",
+    "n_atoms": 391,
+    "pbc": true,
+    "cell": [
+      15.7819,
+      15.7819,
+      15.7819
+    ],
+    "metal": "Nd",
+    "spin": 4
+  },
+  {
+    "id": "box_nonpbc",
+    "title": "Box, non-periodic",
+    "file": "models/Nd_box_nonpbc.xyz",
+    "n_atoms": 391,
+    "pbc": false,
+    "cell": null,
+    "metal": "Nd",
+    "spin": 4
+  },
+  {
+    "id": "droplet_pbc",
+    "title": "Droplet, periodic",
+    "file": "models/Nd_droplet_pbc.xyz",
+    "n_atoms": 391,
+    "pbc": true,
+    "cell": [
+      41.3016,
+      41.3016,
+      41.3016
+    ],
+    "metal": "Nd",
+    "spin": 4
+  },
+  {
+    "id": "droplet_nonpbc",
+    "title": "Droplet, non-periodic",
+    "file": "models/Nd_droplet_nonpbc.xyz",
+    "n_atoms": 391,
+    "pbc": false,
+    "cell": null,
+    "metal": "Nd",
+    "spin": 4
+  }
+]

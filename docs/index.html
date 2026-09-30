@@ -22,7 +22,13 @@
   th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
   th { font-weight: 700; }
   [hidden] { display: none !important; }
+  .viewer-wrap { position: relative; width: 100%; height: 420px; border: 1px solid #ccc; background: #fafafa; margin: 8px 0 6px; }
+  .viewer-wrap canvas { outline: none; }
+  .legend-atoms { font-size: 12px; color: #333; margin: 0 0 8px; }
+  .legend-atoms span { margin-right: 14px; white-space: nowrap; }
+  .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/3dmol@2.4.2/build/3Dmol-min.js"></script>
 </head>
 <body>
 <main>
@@ -42,6 +48,25 @@
     Those five Dy runs are separate trajectories, and they do not share one outcome:
     the hydroxide leaves, a bare oxygen stays inside 3.0 Å, or two hydroxides remain.
   </p>
+
+  <h2>Initial structure (interactive)</h2>
+  <p class="note">
+    Representative metal: Nd (spin multiplicity 4). Composition Nd<sup>3+</sup> + 3 OH<sup>−</sup> + 128 H<sub>2</sub>O, 391 atoms, charge 0.
+    Drag to rotate, scroll to zoom. The four buttons switch the boundary-condition geometry used in the MD set.
+  </p>
+  <p class="legend-atoms">
+    <span><i class="swatch" style="background:#7B2D8E"></i>Nd</span>
+    <span><i class="swatch" style="background:#E53935"></i>O</span>
+    <span><i class="swatch" style="background:#BDBDBD;border:1px solid #999"></i>H</span>
+  </p>
+  <div class="temps" data-group="struct">
+    <button type="button" class="active" data-file="models/Nd_box_pbc.xyz" data-cell="15.7819,15.7819,15.7819">Box, periodic</button>
+    <button type="button" data-file="models/Nd_box_nonpbc.xyz">Box, non-periodic</button>
+    <button type="button" data-file="models/Nd_droplet_pbc.xyz" data-cell="41.3016,41.3016,41.3016">Droplet, periodic</button>
+    <button type="button" data-file="models/Nd_droplet_nonpbc.xyz">Droplet, non-periodic</button>
+  </div>
+  <div id="viewer" class="viewer-wrap"></div>
+  <p class="note" id="viewer-caption">Nd · box, periodic · drag to rotate</p>
 
   <h2>Distance of the three t = 0 hydroxide oxygens</h2>
   <p class="note">
@@ -137,6 +162,11 @@ document.querySelectorAll(".temps").forEach(function (bar) {
   bar.addEventListener("click", function (event) {
     var button = event.target.closest("button");
     if (!button) return;
+    if (bar.dataset.group === "struct") {
+      select("struct", "file", button.dataset.file);
+      loadStructure(button.dataset.file, button.dataset.cell || "", button.textContent.trim());
+      return;
+    }
     if (bar.dataset.group === "cmp") {
       var metal = button.dataset.metal;
       select("cmp", "metal", metal);
@@ -173,6 +203,37 @@ document.querySelectorAll(".temps").forEach(function (bar) {
   });
 });
 document.querySelectorAll('.panel[data-group="dist-dpa"]').forEach(function (panel) { panel.hidden = true; });
+
+var viewer = null;
+function styleViewer(v) {
+  v.setBackgroundColor(0xfafafa);
+  v.setStyle({}, { sphere: { scale: 0.22 }, stick: { radius: 0.08, colorscheme: "Jmol" } });
+  v.setStyle({ elem: "Nd" }, { sphere: { scale: 0.55, color: "#7B2D8E" } });
+  v.setStyle({ elem: "O" }, { sphere: { scale: 0.28, color: "#E53935" } });
+  v.setStyle({ elem: "H" }, { sphere: { scale: 0.14, color: "#F5F5F5" } });
+}
+function loadStructure(file, cellCsv, title) {
+  var element = document.getElementById("viewer");
+  if (!viewer) {
+    viewer = $3Dmol.createViewer(element, { backgroundColor: "0xfafafa" });
+  }
+  fetch(file).then(function (r) { return r.text(); }).then(function (data) {
+    viewer.clear();
+    var model = viewer.addModel(data, "xyz");
+    if (cellCsv) {
+      var parts = cellCsv.split(",").map(Number);
+      if (parts.length === 3 && parts.every(function (x) { return x > 0; })) {
+        model.setCrystData(parts[0], parts[1], parts[2], 90, 90, 90);
+        viewer.addUnitCell({ box: { color: "0x666666", opacity: 0.35 } });
+      }
+    }
+    styleViewer(viewer);
+    viewer.zoomTo();
+    viewer.render();
+    document.getElementById("viewer-caption").textContent = "Nd · " + title.toLowerCase() + " · drag to rotate";
+  });
+}
+loadStructure("models/Nd_box_pbc.xyz", "15.7819,15.7819,15.7819", "Box, periodic");
 </script>
 </body>
 </html>
