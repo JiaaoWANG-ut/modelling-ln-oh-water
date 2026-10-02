@@ -27,6 +27,7 @@
   .legend-atoms { font-size: 12px; color: #333; margin: 0 0 8px; }
   .legend-atoms span { margin-right: 14px; white-space: nowrap; }
   .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+  pre { font-size: 13px; background: #f4f4f4; border: 1px solid #ddd; padding: 8px 10px; overflow-x: auto; margin: 6px 0 8px; }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/3dmol@2.4.2/build/3Dmol-min.js"></script>
 </head>
@@ -47,6 +48,17 @@
     (0.37, 0.03, 1.01, 2.11, 0.15).
     Those five Dy runs are separate trajectories, and they do not share one outcome:
     the hydroxide leaves, a bare oxygen stays inside 3.0 Å, or two hydroxides remain.
+  </p>
+
+  <h2>Raw trajectories</h2>
+  <p class="note">All 240 trajectories are on NERSC Perlmutter, readable by every NERSC user (read-only):</p>
+  <pre>cd /global/cfs/cdirs/m4517/jiaao/genesis/md/ln-150ps/runs</pre>
+  <p class="note">
+    Layout <code>&lt;model&gt;/&lt;boundary&gt;/&lt;metal&gt;/T&lt;K&gt;/</code>, for example <code>uma-s-1.2.1/box_pbc/Nd/T300/</code>.
+    Model is <code>uma-s-1.2.1</code> or <code>DPA4C-Plus</code>. Boundary is <code>box_pbc</code>, <code>box_nonpbc</code>, <code>droplet_pbc</code> or <code>droplet_nonpbc</code>.
+    Each folder holds <code>traj.extxyz</code> (frames every 0.1 ps with positions, momenta, forces and energy; about 90 MB),
+    <code>md.log</code>, <code>checkpoint.extxyz</code> (last frame) and <code>done.json</code>.
+    The folders also contain Er, Gd, La and Lu runs that are not shown on this page.
   </p>
 
   <h2>Initial structure (interactive)</h2>
